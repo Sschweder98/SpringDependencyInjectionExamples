@@ -1,7 +1,7 @@
 package com.example.SpringDependencyInjectionExamples.controllers;
 
 import com.example.SpringDependencyInjectionExamples.services.GreetingService;
-import com.example.SpringDependencyInjectionExamples.services.GreetingServiceImpl;
+import com.example.SpringDependencyInjectionExamples.services.SetterInjectedGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +14,7 @@ class SetterInjectedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new SetterInjectedController();
-        controller.setGreetingService(new GreetingServiceImpl());
+        controller.setGreetingService(new SetterInjectedGreetingService());
     }
 
     @Test
